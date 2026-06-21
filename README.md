@@ -2,7 +2,7 @@
 
 A lightweight, modern, and highly educational **Forensic Image Steganalysis Web Application** designed as a Python mini-project. 
 
-This project allows users to upload standard images (`.jpg`, `.jpeg`, `.png`) to a clean, minimal, single-page dashboard. The backend performs active, multi-layered forensic inspection to analyze the image's structural, metadata, and pixel-level configurations. It provides a real-time, functional diagnosis classifying the image as **CLEAN** or **SUSPICIOUS** with clear, mathematical, and logical justifications.
+This project allows users to upload standard images (`.jpg`, `.jpeg`, `.png`) to a clean, minimal, single-page dashboard. The backend performs active, multi-layered forensic inspection to analyze the image's structural, metadata, and pixel-level configurations. It provides a real-time, functional diagnosis classifying the image as **clean** or **suspicious** with clear, mathematical, and logical justifications.
 
 ---
 
@@ -25,7 +25,7 @@ Images are represented by pixels, and pixels are made of color channels (Red, Gr
 Modern image files do not just contain pixel colors; they contain header blocks that house structured information about the image:
 * **EXIF (Exchangeable Image File Format)**: Used by cameras and phones to store photo capture date, location (GPS), camera make/model, orientation, and creation software.
 * **PNG Text Chunks (`tEXt`, `zTXt`, `iTXt`)**: Standard key-value text annotations injected inside PNG structure (e.g., Author, Software, Description).
-* Steganographers often hide small text records directly in these fields since they do not affect image rendering. The app scans and extracts these blocks, flagging suspicious software tags (e.g., references to stego tools like *Steghide*).
+* Steganographers often hide small text records directly in these fields since they do not affect image rendering. The app scans and extracts these blocks, flagging clean software tags (e.g., references to stego tools like *Steghide*).
 
 ### C. End-of-File (EOF) Payload Inspection (Overlay Detection)
 Every major image file format must comply with precise structural container standards defined by the ISO:

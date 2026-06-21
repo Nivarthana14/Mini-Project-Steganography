@@ -156,12 +156,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Reset classes
         verdictCard.className = 'card verdict-card span-full';
         
-        if (data.verdict === 'SUSPICIOUS') {
-            verdictCard.classList.add('suspicious');
-            verdictBadge.textContent = 'SUSPICIOUS';
-        } else {
+        if (data.verdict === 'clean') {
             verdictCard.classList.add('clean');
-            verdictBadge.textContent = 'CLEAN';
+            verdictBadge.textContent = 'clean';
+        } else {
+            verdictCard.classList.add('suspicious');
+            verdictBadge.textContent = 'suspicious';
         }
 
         // Render reasons list
